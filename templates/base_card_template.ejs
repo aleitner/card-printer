@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= cards[0].type %> Cards</title>
+    <script>
+        function printCopies(selectElement) {
+            const numCopies = parseInt(selectElement.value, 10);
+    
+            // Get the card wrapper div container
+            const cardWrapper = selectElement.parentElement;
+    
+            // Get the card element inside the card wrapper
+            const cardElement = cardWrapper.querySelector('.card');
+          
+            // Get the print container
+            const printContainer = document.getElementById("print-container");
+    
+            // Add the desired number of card copies to the print container after removing previous cards
+            addCardCopiesToContainer(printContainer, cardElement, numCopies);
+        } 
+    
+        function addCardCopiesToContainer(printContainer, cardElement, numCopies) {
+            // Remove cards with the same name from the print container
+            const cardName = cardElement.attributes['data-card-name'].value;
+            const existingCards = printContainer.querySelectorAll(`[data-card-name="${cardName}"]`);
+            existingCards.forEach((card) => printContainer.removeChild(card));
+
+            // Add the desired number of card copies to the print container
+            for (let i = 0; i < numCopies; i++) {
+            const clonedCard = cardElement.cloneNode(true);
+            printContainer.appendChild(clonedCard);
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="base_card_styles.css">
+</head>
+<body>
+    <div id="options-bar">
+        <button onclick="window.print()">Print Cards</button>
+    </div>
+
+    <div id="display-container" class="card-grid">
+        <% cards.forEach((card) => { %>
+            <div class="card-wrapper">
+                <!-- Add the "data-card-name" attribute -->
+                <%- include(`./${gameFolder}/${card.type.toLowerCase()}_card_template.ejs`, {card: card, cardName: card.name}) %>
+                <select onchange="printCopies(this)">
+                    <% for (let i = 0; i <= 10; i++) { %>
+                        <option value="<%= i %>"><%= i %></option>
+                    <% } %>
+                </select>
+            </div>
+        <% }); %>
+    </div>
+
+    <div id="print-container" class="card-grid"></div>
+</body>
+</html>
