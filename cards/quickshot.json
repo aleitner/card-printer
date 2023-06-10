@@ -1,0 +1,100 @@
+[
+    {
+    "type": "Action",
+    "name": "Pistol Shot",
+    "description": "Deal 2 damage to target opponent."
+    },
+    {
+    "type": "Action",
+    "name": "Lucky Draw",
+    "description": "Draw 2 cards. You may play an additional Action Card."
+    },
+    {
+    "type": "Action",
+    "name": "Shockwave",
+    "description": "Deal 1 damage to each opponent."
+    },
+    {
+    "type": "Action",
+    "name": "Triple Strike",
+    "description": "Deal 1 damage to target player and each opponent adjacent to the target player."
+    },
+    {
+    "type": "Action",
+    "name": "Shotgun blast",
+    "description": "Roll a Six-sided die. If you roll a 4, 5, or 6, deal 3 damage to target player."
+    },
+    {
+    "type": "Action",
+    "name": "Power Surge",
+    "description": "Shuffle your hand back into the deck and draw the same number of cards plus one additional card. You may play an additional Action Card."
+    },
+    {
+    "type": "Action",
+    "name": "Empty Revolver",
+    "description": "Roll a 6 sided die. Deal X damage to target opponent."
+    },
+    {
+    "type": "Action",
+    "name": "Disarm",
+    "description": "Deal 1 damage to target opponent. That player discards a card."
+    },
+    {
+    "type": "Action",
+    "name": "Rally",
+    "description": "Look at target player's hand. You may play an Action Card from their hand this turn."
+    },
+    {
+    "type": "Action",
+    "name": "Sights locked",
+    "description": "Effects of your Action Cards cannot be countered or dodged."
+    },
+    {
+    "type": "Reaction",
+    "name": "Defuse",
+    "description": "Cancel the effect of target Action Card.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Fast Reflexes",
+    "description": "Dodge. Draw a card.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Headshot",
+    "description": "After hitting an opponent, reveal this card from your hand to deal an additional point of damage and draw a card.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Revolver",
+    "description": "Deal 2 damage to the targeted opponent.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Throwing Knife",
+    "description": "Deal 1 damage to the targeted opponent.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Lightning Reflexes",
+    "description": "Draw a card and play an additional reaction card.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Trip Mine",
+    "description": "Discard from your hand, target player who dealt damage to you discards a card.",
+    "accuracy": 0
+    },
+    {
+    "type": "Reaction",
+    "name": "Vengeful Strike",
+    "description": "Discard from your hand, deal 1 damage to target player who dealt damage to you this turn.",
+    "accuracy": 0
+    }
+]

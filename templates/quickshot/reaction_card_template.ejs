@@ -2,11 +2,18 @@
   .reaction-card-type {
     color: red;
   }
+  .card-accuracy {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    font-size: 1.5em; /* Increased font size */
+    font-weight: bold; /* Made font bolder */
+  }
   </style>
   
   <div class="card reaction-card" data-card-name="<%= cardName %>">
     <div class="card-title"><%= card.name %></div>
-    <div class="card-type reaction-card-type">Reaction</div>
+    <div class="card-type reaction-card-type"><%= card.type %></div>
     <div class="card-description"><%= card.description %></div>
-    <div class="card-modifier">Accuracy Modifier: <%= card.modifier %></div>
+    <div class="card-accuracy"><%= card.accuracy %></div>
   </div>
